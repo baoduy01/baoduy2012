@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numberOneTriangle(number){
+    let block = document.createElement("div");
+    document.body.appendChild(block);
+   let output ='';
+    if(number < 1 || number > 10){
+        document.getElementsByTagName('div').innerHTML ="Số nhập không nằm trong khoảng đến 10";  
+        return;
+    }
+    for(let i = 1;i<=number;i++){
+     
+        let symbol ='';
+        for(let j = 1 ;j <= i ; j++){
+            symbol += '* ';
+        }
+        output += symbol + '<br>';
+    }
+    block.innerHTML = output;
+}
+numberOneTriangle(5);
+    </script>
+</body>
+</html>
